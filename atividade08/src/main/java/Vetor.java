@@ -8,4 +8,12 @@ public class Vetor {
     public void preencherVetor() {
         Scanner scanner = new Scanner(System.in);
     }
+
+
+    public void exibirVetor() {
+        System.out.println("Valores do vetor:");
+        for (int i = 0; i < count; i++) {
+            System.out.println(vetor[i]);
+        }
+    }
 }
