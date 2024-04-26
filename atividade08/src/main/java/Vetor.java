@@ -7,8 +7,19 @@ public class Vetor {
 
     public void preencherVetor() {
         Scanner scanner = new Scanner(System.in);
-    }
 
+    while (true) {
+            System.out.println("Digite um número inteiro (0 para parar):");
+            int numero = scanner.nextInt();
+
+            vetor[count] = numero;
+            count++;
+
+            if (numero == 0) {
+                break;
+            }
+        }
+    }
 
     public void exibirVetor() {
         System.out.println("Valores do vetor:");
