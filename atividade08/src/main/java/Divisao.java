@@ -1,27 +1,23 @@
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Divisao {
-    private double numero1;
-    private double numero2;
-
-    public Divisao(String numero1Str, String numero2Str){
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         try {
-            this.numero1 = Double.parseDouble(numero1Str);
-            this.numero2 = Double.parseDouble(numero2Str);
-        } catch (NumberFormatException err){
-            throw new InputMismatchException("Erro! Digite um número!");
-        }
-    }
+            System.out.println("Digite o primeiro número:");
+            double num1 = scanner.nextDouble();
 
-    public void ResultadoDivisao(){
-        try{
-            if (this.numero2 == 0) {
-                throw new ArithmeticException("Erro: Divisão por zero não é permitida.");
-            } else {
-                System.out.println("Resultado da divisão: " + this.numero1 / this.numero2);
-            }
-        } catch(ArithmeticException | InputMismatchException e){
-            System.err.println(e.getMessage());
+            System.out.println("Digite o segundo número:");
+            double num2 = scanner.nextDouble();
+
+            double resultado = num1 / num2;
+            System.out.println("Resultado da divisão: " + resultado);
+
+        } catch (ArithmeticException e) {
+            System.out.println("Erro: Divisão por zero não é permitida.");
+        } catch (InputMismatchException e) {
+            System.out.println("Erro: Você digitou um valor que não é numérico.");
         }
     }
 }
