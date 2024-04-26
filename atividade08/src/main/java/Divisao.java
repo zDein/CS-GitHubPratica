@@ -17,8 +17,9 @@ public class Divisao {
         try{
             if (this.numero2 == 0) {
                 throw new ArithmeticException("Erro: Divisão por zero não é permitida.");
+            } else {
+                System.out.println("Resultado da divisão: " + this.numero1 / this.numero2);
             }
-            System.out.println("Resultado da divisão: " + this.numero1 / this.numero2);
         } catch(ArithmeticException | InputMismatchException e){
             System.err.println(e.getMessage());
         }
